@@ -29,8 +29,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 #Image handling with Amazon
-gem 'paperclip'
-gem 'aws-sdk', '< 2.0'
+gem 'paperclip', "~> 4.2"
+gem 'aws-sdk', "~> 1.5.7"
 
 
 # Use Unicorn as the app server

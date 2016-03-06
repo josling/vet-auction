@@ -41,11 +41,14 @@ Rails.application.configure do
 
 config.paperclip_defaults = {
   :storage => :s3,
+  #:region => 'us-west-1',
+  :bucket => ENV['S3_BUCKET_NAME'],
   :s3_credentials => {
-    :bucket => ENV['auctionimgs'],
-    :access_key_id => ENV['AKIAJVEYSJHU627CNDUA'],
-    :secret_access_key => ENV['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']
-  }
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  },
+    :url =>':s3_domain_url',
+    :path => '/:class/:attachment/:id_partition/:style/:filename',
 }
 
 end

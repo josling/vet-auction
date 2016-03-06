@@ -4,6 +4,7 @@
   <strong>Item:</strong>
   <%= @item.item %><br>
   <%= @item.desc %>
+    <td><%= image_tag @item.image.url(:thumb) %></td>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |

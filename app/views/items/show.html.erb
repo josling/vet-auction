@@ -3,7 +3,8 @@
 <p>
   <strong>Item:</strong>
   <%= @item.item %><br>
-  <%= @item.desc %>
+  Description: <%= @item.desc %> <br>
+  Number: <%= @item.number %><br>
     <td><%= image_tag @item.image.url(:thumb) %></td>
 </p>
 
